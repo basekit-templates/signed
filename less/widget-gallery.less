@@ -1,0 +1,134 @@
+//
+// Copyright 2014 BaseKit Platform Ltd
+//
+// -----------------------------
+// Gallery Widget
+// -----------------------------
+
+
+// Gallery Layout
+// --------------
+
+.gallery {
+    // Gallery List
+    .gallery-list {
+        .clearfix;
+        margin: 0 auto;
+    }
+    // Gallery Item
+    .gallery-item {
+        display: inline-block;
+        float: left;
+        margin: 0 0 20px;
+        padding: 0 10px;
+        position: relative;
+        width: 33.3%;
+        vertical-align: top;
+        // Display at 100% at mobile
+        @media @mobile {
+            margin-right: 0!important;
+            width: 100%;
+        }
+        .image-link {
+            .transition(all 0.5s ease-in-out);
+        }
+        &:hover {
+            figcaption {
+                background-color: lighten(@color-swatch7, 10%);
+                .transition(all 0.5s ease-in-out);
+            }
+        }
+    }
+    .figure {
+        border: 1px solid lighten(@color-swatch7, 6%);
+        .box-shadow;
+        .transform(scale(1));
+        .transition(all 0.5s ease-in-out);
+        &:hover {
+            .transform(scale(1.05));
+        }
+        .caption-link:hover {
+            text-decoration: none;
+        }
+    }
+
+    // Figcaption
+    figcaption {
+        display: block;
+        .image-title {
+            font-family: @font__h4--font-family;
+            color: @font-swatch4-color;
+            font-size: bkscale(@font__h4--font-size,0.9);
+            font-weight: @font__h4--font-weight;
+            line-height: bkscale(@font__h4--line-height,0.8);
+        }
+        .image-description {
+            font-family: @font__p--font-family;
+            color: @font-swatch5-color;
+            font-size: bkscale(@font__p--font-size,0.8);
+            font-weight: @font__p--font-weight;
+            line-height: bkscale(@font__p--line-height,0.8);
+        }
+    }
+
+    // Use Background Image
+    .image-link {
+        // images on tablet and desktop
+        display: block;
+        background-repeat: inherit;
+        background-position: inherit;
+        background-size: inherit;
+        background-image: none !important;
+        .image {
+            display: block;
+            width: 100%;
+        }
+        @media @mobile {
+            max-height: 200px;
+            overflow: hidden;
+        }
+    }
+}
+
+
+
+// Gallery Image Captions
+// ----------------------
+
+.gallery .caption {
+    display: block;
+    margin: 0;
+    padding: 20px;
+    background-color: @color__gallery-caption--background;
+}
+
+
+
+
+
+// Responsive Columns
+// ------------------
+
+// Two Columns
+.columns-two-left,
+.columns-two-right,
+// Three Columns
+.columns-three-left,
+.columns-three-middle,
+.columns-three-right,
+// Four Columns
+.columns-four-first,
+.columns-four-second,
+.columns-four-third,
+.columns-four-fourth {
+    .gallery figcaption .image-title {
+        font-size: bkscale(@font__h4--font-size,0.8);
+        line-height: bkscale(@font__h4--line-height,0.8);
+    }
+    .gallery figcaption .image-description {
+        display: none;
+    }
+    .gallery .caption {
+        padding: 10px;
+    }
+}

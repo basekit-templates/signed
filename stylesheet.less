@@ -1,0 +1,498 @@
+//
+// Copyright 2014 BaseKit Platform Ltd
+//
+// ---------------------
+// BasePlate main styles
+// ---------------------
+
+// Template Imports
+// ----------------
+@import "@{templateCommon}/bk-less-framework-v8.less";     // BK LESS Framework
+
+@import "@{templateLocal}/less/variables-mixins.less";         // Variables & Mixins
+
+@import "@{templateLocal}/less/widget-gallery.less";    // Widgets
+@import "@{templateLocal}/less/widget-slideshow.less";
+@import "@{templateLocal}/less/header-style.less";      // Header
+@import "@{templateLocal}/less/forms-and-buttons.less";
+
+@import "@{templateLocal}/less/plugin-blog.less";       // Plugins
+@import "@{templateLocal}/less/plugin-menu.less";
+@import "@{templateLocal}/less/plugin-ecommerce.less";
+
+@import "@{templateLocal}/bk-v8-test.less"; // V8 Variables
+@import "@{templateLocal}/v8-variables.less";  // V8 Overrides
+
+
+// Template Styles
+// ---------------
+h1 {
+	padding:10px 0 20px 0;
+}
+
+// Wrapping container
+.container {
+    width: 90%;
+    margin: 0 5%;
+    @media only screen and (min-width: 1300px) {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+
+// Formatting all inputs and buttons so they match in size
+input, textarea, button, .button {
+    padding: 5px 12px;
+    line-height: @font__button--line-height;
+}
+
+
+
+
+// --------------------
+// All Widgets
+// --------------------
+
+.widget {
+    clear: both;
+}
+
+
+
+
+// --------------------
+// Commas after tags
+// --------------------
+
+.tag-link {
+    white-space: nowrap;
+}
+
+.tag-link:after {
+    content: "\002C";
+}
+.tag-item:last-child .tag-link:after {
+    content: "";
+}
+
+
+
+
+// --------------------
+// Default Page
+// --------------------
+
+.bk-pt-home .page-content {
+    border-top: none;
+    padding: 0 0 40px;
+}
+
+.page-content {
+    border-top: 2px solid @color-swatch7;
+    padding: 40px 0;
+    @media @mobile {
+        border-top: 0;
+    }
+}
+
+
+
+
+
+// -----------------------------
+// Plugins with two columns
+// -----------------------------
+
+.ecomproductslist .listing-header, // Ecom Filters
+.bk-pt-blog__search, // Blog Search
+.bk-pt-menu__menusections { // Menu Sections
+    width: 20%;
+    float: left;
+}
+
+.ecomproductslist .listing-body, // List of Products
+.bk-pt-blog__postslist, // Blog List
+.bk-pt-menu__menu { // Menu
+    width: 75%;
+    float: right;
+}
+
+.ecomproductslist .listing-header, // Ecom Filters
+.bk-pt-blog__search, // Blog Search
+.bk-pt-menu__menusections, //Menu Sections
+.ecomproductslist .listing-body, // List of Products
+.bk-pt-blog__postslist, // Blog List
+.bk-pt-menu__menu  { // Menu
+    @media @tablet {
+        width: 100%;
+    }
+}
+
+
+
+
+
+// -----------------------------
+// Text Size for Tablet & Mobile
+// -----------------------------
+
+@media @tablet {
+    h1 {
+        font-size: bkscale(@font__h1--font-size,0.9);
+        line-height: bkscale(@font__h1--line-height,0.9);
+    }
+    h2, .company-link  {
+        font-size: bkscale(@font__h2--font-size,0.9);
+        line-height: bkscale(@font__h2--line-height,0.9);
+    }
+    p, li, ol, blockquote, code, pre, time, td, th, .via, .profile a, .content a,
+    .responsiveslideshow .caption .image-description,
+    .category-link, .tag-link, .quantity-field,
+    .menusections-item a, .bk-pt-menu .menusections-item a,
+    .product-body {
+        font-size: bkscale(@font__p--font-size,0.9);
+        line-height: bkscale(@font__p--line-height,0.9);
+    }
+}
+
+
+@media @mobile {
+    h1 {
+        font-size: bkscale(@font__h1--font-size,0.8);
+        line-height: bkscale(@font__h1--line-height,0.8);
+    }
+    h2, .company-link  {
+        font-size: bkscale(@font__h2--font-size,0.8);
+        line-height: bkscale(@font__h2--line-height,0.8);
+    }
+    h3 {
+        font-size: bkscale(@font__h3--font-size,0.9);
+        line-height: bkscale(@font__h3--line-height,0.9);
+    }
+    h4, .account-link, .legend,
+    .listing-title {
+        font-size: bkscale(@font__h4--font-size,0.9);
+        line-height: bkscale(@font__h4--line-height,0.9);
+    }
+    p, li, ol, blockquote, code, pre, time, td, th, .via, .profile a, .content a,
+    .responsiveslideshow .caption .image-description,
+    .category-link, .tag-link, .quantity-field,
+    .menusections-item a, .bk-pt-menu .menusections-item a,
+    .product-body {
+        font-size: bkscale(@font__p--font-size,0.8);
+        line-height: bkscale(@font__p--line-height,0.8);
+    }
+}
+
+
+
+
+// -----------------------------
+// Twitter Widget
+// -----------------------------
+
+.twitter .tweet-item {
+    padding: 20px;
+    border: 1px solid @color-swatch7;
+    .box-shadow;
+    p {
+        padding-bottom: 0;
+    }
+    .tweet-wrap {
+        max-width: 80%;
+    }
+    .avatar {
+        max-width: 16%;
+        margin-right: 15px;
+        @media @mobile {
+            margin-bottom: 10px;
+            margin-right: 0;
+        }
+    }
+    .avatar-image {
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        @media @tablet {
+            max-width: 48px;
+        }
+    }
+    .tweet-wrap {
+        max-width: 77%;
+        @media @mobile {
+            margin: 0 auto;
+        }
+    }
+    .avatar,
+    .tweet-wrap {
+        display: inline-block;
+        vertical-align: top;
+        @media @mobile {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+    .account-link {
+        font-family: @font__h3--font-family;
+        color: @color-swatch3;
+        font-size: @font__p--font-size;
+        font-weight: @font__p--font-weight;
+        line-height: @font__p--line-height;
+    }
+    .tweet-metadata {
+        font-size: 90%;
+        .timestamp, .via {
+            color: lighten(@color-swatch5, 15%)
+        }
+    }
+    .timestamp {
+        margin-right: 5px;
+    }
+}
+
+
+
+
+
+// -----------------------------
+// Blockquote
+// -----------------------------
+
+blockquote {
+    position: relative;
+    quotes: "“" "”" "“" "”";
+    padding: 20px 40px;
+    margin: 40px;
+    border: 1px solid @color-swatch7;
+    .box-shadow;
+    &:before {
+        position: absolute;
+        top: -2px;
+        left: 10px;
+        font-size: 60px;
+        color: @color-swatch7;
+        font-family: geneva, sans-serif;
+    }
+    @media @tablet {
+        margin: 20px 0;
+    }
+}
+
+
+// -----------------------------
+// Profile widgets in Footer
+// -----------------------------
+
+// Twitter
+
+.template-footer .twitter a {
+    color: @color-swatch3;
+}
+
+// Social Icons
+
+.social-name {
+    width: 0;
+    visibility:hidden;
+    opacity:0;
+    font-size: 0;
+    .transition( all, 0.5s, ease );
+}
+
+// Social icons colour
+.social-link:before {
+    color: @font-swatch6-color;
+    font-size: 16px;
+    .transition( all, 0.5s, ease );
+    @media @tablet {
+        font-size: 18px;
+    }
+}
+
+.social-link:hover {
+    text-decoration: none;
+    &:before {
+        color: @font-swatch6-color-hover;
+        .transition( all, 0.5s, ease );
+    }
+    .social-name {
+        width: auto;
+        visibility: visible;
+        opacity: 1;
+        font-size: 16px;
+        color: @font-swatch6-color-hover;
+        .transition( all, 0.5s, ease );
+    }
+}
+
+// Address
+
+.companyaddress p {
+    padding-bottom: 0;
+}
+
+// Style in right column
+
+.template-footer__column2.col2 {
+    // Social icons
+    .social-item:last-child {
+        margin-right: 0;
+        .icon:before {
+            margin-right: 0;
+        }
+    }
+    // Signup Form
+    .signupform .form-body {
+        width: auto;
+    }
+    // Twitter
+    .twitter .tweet-item .avatar {
+        @media screen and (min-width: 700px) {
+            float: right;
+            margin-right: 0;
+            margin-left: 15px;
+        }
+    }
+}
+
+
+
+
+// -----------------------------
+// Divider
+// -----------------------------
+
+hr.rule {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: @color-swatch7;
+  display: inline-block;
+}
+
+// Horizontal rule in blog posts
+hr {
+    height: 1px;
+    border: 0;
+    margin-bottom: 18px;
+    background-color: @color-swatch7;
+}
+
+
+
+
+// -----------------------------
+// Click to Call
+// -----------------------------
+
+.clicktocall {
+    .label {
+        font-family: @font-swatch7-font-family;
+        color: @font-swatch7-color;
+        font-size: @font__button--font-size;
+        font-weight: @font__button--font-weight;
+        line-height: @font__button--line-height;
+    }
+    @media screen and (min-width: 480px) {
+        a:hover {
+            text-decoration: none;
+            cursor: default;
+        }
+        .label {
+            cursor: default;
+        }
+    }
+}
+
+.clicktocall a {
+    @media @mobile {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+
+// -----------------------------
+// Image Widget
+// -----------------------------
+
+.imagewidget {
+    .image-title {
+        font-family: @font__h3--font-family;
+        color: @color__image-title--text;
+        font-size: @font__h3--font-size;
+        font-weight: @font__h3--font-weight;
+        line-height: @font__h3--line-height;
+    }
+    .image-description {
+        font-size: bkscale(@font__p--font-size,0.8);
+        line-height: bkscale(@font__p--line-height,0.8);
+        color: @color__image-description--text;
+    }
+}
+
+
+
+
+// -----------------------------
+// Yelp Widget
+// -----------------------------
+
+.yelpreview ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+
+
+
+// -----------------------------
+// Footer
+// -----------------------------
+
+
+.template-footer {
+    display: inline-block;
+    width: 100%;
+    padding: 30px 0;
+    a {
+        color: @font-swatch6-color;
+        &:hover {
+            color: @font-swatch6-color-hover;
+            text-decoration: none;
+        }
+    }
+    p,
+    a {
+        font-size: bkscale(@font__p--font-size,0.9);
+        line-height: bkscale(@font__p--line-height,0.9);
+    }
+}
+
+.template-footer__column2.col2 {
+    margin-top: 20px;
+}
+
+.template-footer__column1,
+.template-footer__column2 {
+    @media screen and (min-width: 700px) {
+        overflow: hidden;
+        display: inline-block;
+        width: 50%;
+        height: auto;
+        &.col1 {
+            float: left;
+            padding-right: 20px;
+        }
+        &.col2 {
+            float: right;
+            padding-left: 20px;
+            text-align: right;
+            margin-top: 0;
+        }
+    }
+}
+

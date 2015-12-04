@@ -1,0 +1,15 @@
+{# Copyright 2014 BaseKit Platform Ltd #}
+{% extends "layout.twig" %}
+{% block class %}bk-pt-blog{% endblock %}
+{% block content %}
+
+<div class="bk-pt-blog__search">
+    {{widget('blogsearch', 'blogsearch', {})|raw}}
+</div>
+
+<div class="bk-pt-blog__postslist">
+    {{widget('blogpostlist', 'allblogposts', {})|raw}}
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,176 @@
+// Template colour overrides
+html body {
+	background-color: @color__body--background;
+}
+
+.company-link {
+	color: @color__companyname--text;
+}
+
+a {
+	color: @color__link--text;
+}
+
+h1 {
+	color: @color__h1--text;
+}
+
+h2 {
+	color: @color__h2--text;
+}
+
+h3 {
+	color: @color__h3--text;
+}
+
+h4 {
+	color: @color__h4--text;
+}
+
+p {
+	color: @color__p--text;
+}
+
+div.content a {
+	color: @color__link--text;
+}
+
+button,
+a.button,
+button.button {
+	background-color: @color__button--background;
+	color: @color__button--text;
+	border-color: @color__button--border;
+	&:hover {
+		background-color: @color__button--background--hover;
+	}
+}
+
+.extendednavigation {
+	&__item-name.item-name {
+		color: @color__navigation--text;
+
+		&:hover {
+			color: @color__navigation--text--hover;
+		}
+	}
+
+	&__navigation-item.selected > .item-name {
+		color: @color__navigation--text--selected;
+	}
+}
+
+form,
+.form {
+	legend,
+	.legend {
+		color: @color__form-legend--text;
+	}
+	label,
+	.label {
+		color: @color__form-label--text;
+	}
+	.signupform__label {
+		color: @color__h2--text;
+	}
+}
+
+figcaption .gallery {
+	.caption {
+		background-color: @color__gallery-caption--background;
+	}
+	&__image-title.image-title {
+		color: @color__gallery-title--text;
+	}
+	&__image-description.image-description {
+		color: @color__gallery-description--text;
+	}
+}
+
+.responsiveslideshow {
+	background-color: transparent;
+	&__caption.caption {
+		background-color: @color__slideshow-caption--background;
+	}
+	&__image-title.image-title.image-title {
+		color: @color__slideshow-title--text;
+	}
+	&__image-description.image-description.image-description {
+		color: @color__slideshow-description--text;
+	}
+	.button--pagination.button--pagination {
+		background-color: @color__slideshow-pagination-item--background;
+	}
+	.selected .button--pagination.button--pagination.button--pagination {
+		background-color: @color__slideshow-pagination-item--background--selected;
+	}
+}
+
+.twitter {
+	&__tweet-item {
+		background-color: @color__twitter-item--background;
+	}
+	&__tweet-item .account-link.account-link.account-link {
+		color: @color__twitter-account-name--text;
+	}
+}
+
+.socialicons {
+	&__social-link,
+	.social-link {
+		&:hover {
+			text-decoration: none;
+		}
+		&:before {
+			color: @color__socialicons--icon;
+		}
+		&:hover:before {
+			color: @color__socialicons--icon--hover;
+		}
+	}
+}
+
+.blogsearch {
+	&__legend.legend {
+		color: @color__blogsearch-legend--text;
+	}
+	.button--submit:hover {
+		border-color: @color-swatch7;
+	}
+}
+
+.blogpostlist {
+	&__title-link {
+		color: @color__blogpostlist-title--text;
+	}
+}
+
+.blogpost {
+	&__post-title {
+		color: @color__blogpost-title--text;
+	}
+}
+
+.ecomproductslist {
+	&__legend.legend.legend {
+		background-color: @color__ecomproductslist-legend--background;
+		color: @color__ecomproductslist-legend--text;
+	}
+	&__product-item-title.product-item-title,
+	&__product-item-title.product-item-title a {
+		color: @color__ecomproductslist-product-title--text;
+	}
+}
+
+.ecomproduct {
+	&__image-link.image-link,
+	&__gallery-item.gallery-item {
+		background-color: @color__ecomproduct-images--background;
+	}
+	&__product-title {
+		color: @color__ecomproduct-title--text;
+	}
+	&__product-price.product-price {
+		color: @color__ecomproduct-price--text;
+	}
+}

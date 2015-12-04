@@ -1,0 +1,481 @@
+// ----------------------------
+// BUTTONS
+// ----------------------------
+
+button,
+.button,
+.read-more {
+    min-height: 44px;
+    padding: 8px 25px;
+    border: 2px solid @color__button--border;
+    color: @color__button--text;
+    background-color: @color__button--background;
+    .transition( all, 0.5s, ease );
+    &:hover {
+        color: @color__button--text;
+        border: 2px solid @color__secondary;
+        background-color: @color__button--background--hover;
+        text-decoration: none;
+    }
+    @media @mobile {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+// "Expand" button in content widget
+
+.expand.button {
+    padding: 0;
+    border: 0;
+    min-height: inherit;
+    .more,
+    .less {
+        min-height: 44px;
+        padding: 8px 25px;
+        border: 2px solid @color-swatch7;
+        color: @font-swatch7-color;
+        background-color: @font-swatch7-background-color;
+        .transition( all, 0.5s, ease );
+        &:hover {
+            color: @font-swatch7-color;
+            border: 2px solid @color__secondary;
+            text-decoration: none;
+        }
+    }
+}
+
+// Tweet Button
+
+.button.icon--twitter {
+  padding: 8px 25px;
+}
+
+// Buttons in Forms
+
+.signupform .form-body,// Signup
+.ecomproductslist .fieldset--search .form-body .form-group:first-child { // Ecom Search
+    button,
+    .button {
+        @media only screen and (min-width:480px) {
+            padding: 0 12px;
+        }
+    }
+}
+
+.blogsearch .form-body { // Blog
+    button,
+    .button {
+        @media only screen and (min-width:480px) {
+            padding: 7px 12px;
+        }
+    }
+}
+
+// ----------------------------
+// FORMS
+// ----------------------------
+
+
+input[type="search"],
+input[type="email"],
+input[type="password"],
+textarea,
+.input--single-line {
+    min-height: 44px;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+    background-color: transparent;
+    &:focus {
+        border-color: fade(@color-swatch3, 30%);
+        outline: 0;
+    }
+}
+
+
+
+
+// Select field in forms
+// ----------------------------
+
+.select {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -o-appearance:none;
+    appearance:none;
+    -webkit-border-radius: 0;
+    padding: 0 8px;
+}
+select::-ms-expand{
+  display:none;
+}
+.select-wrap {
+    position: relative;
+    height: 20px;
+    line-height: 20px;
+    @media @tablet {
+        height: 44px;
+        line-height: 44px;
+    }
+    &:after {
+        position: absolute;
+        top: 0;
+        right: 8px;
+        height: 20px;
+        line-height: 20px;
+        content: "\F078";
+        font-family: 'FontAwesome', sans-serif;
+        font-size: 14px;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        pointer-events: none;
+        @media @tablet {
+            height: 44px;
+            line-height: 44px;
+        }
+    }
+}
+
+.ecomproduct .select-wrap {
+    height: 44px;
+    line-height: 44px;
+    &:after {
+        height: 44px;
+        line-height: 44px;
+    }
+}
+
+
+
+
+// Legends and labels
+// ----------------------------
+
+.legend {
+    font-family: @font__h3--font-family;
+    font-size: @font__h4--font-size;
+    line-height: @font__h4--line-height;
+    color: @font-swatch4-color;
+    margin-bottom: 10px;
+}
+
+.label,
+.input {
+    font-family: @font__p--font-family;
+    font-size: bkscale(@font__p--font-size,0.8);
+    line-height: bkscale(@font__p--line-height,0.9);
+    color: @font-swatch5-color;
+}
+
+// Signup
+.signupform,
+.blogsearch {
+    .legend {
+        white-space: nowrap;
+    }
+    .label {
+        display: none;
+    }
+}
+
+
+// Signup
+// Blog Search
+// Ecom Search in Header
+// -----------------------------
+
+.signupform .form-body,// Signup
+.blogsearch .form-body,// Blog Search
+.flex-product-search .form-body { // Ecom Search in Header
+    .flex;
+}
+
+.form-group {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    .input,
+    .select {
+        width: 100%;
+        min-height: 44px;
+    }
+    .select {
+        height: 44px;
+    }
+    .input,
+    .textarea {
+        border: 2px solid @color-swatch7;
+    }
+}
+
+.form-group:first-child {
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.form-group:last-child .button {
+    white-space: nowrap;
+    @media @mobile {
+        white-space: normal;
+    }
+}
+
+
+// Buttons in forms
+// ------------------------------------------------
+
+.signupform, // Signup
+.blogsearch { // Blog Search
+    .button {
+        margin-left: -2px;
+        @media @mobile {
+            margin-left: 0;
+        }
+    }
+}
+
+.signupform, // Signup
+.blogsearch, // Blog Search
+.contactform  { // Contact Form
+    .button {
+        @media @mobile {
+            margin-left: 0;
+            background-color: @color-swatch4;
+            color: @color-swatch1;
+            border: none;
+            &:hover {
+                border: none;
+                background-color: @color-swatch3;
+            }
+        }
+    }
+}
+
+// Blog Search Button on Tablet and Desktop
+
+.blogsearch {
+    @media only screen and (min-width:480px) {
+        .input  {
+            border-right: 0;
+        }
+        .button--submit {
+            position: relative;
+            width: 50px;
+            height: auto;
+            padding: 5px 12px;
+            font-size: 0;
+            text-indent: -100px;
+            overflow: hidden;
+            cursor: pointer;
+            background-color: transparent;
+            border: 2px solid @color-swatch7;
+            border-left: 0;
+            &:before {
+                position: absolute;
+                right: 13px;
+                content: "\F002";
+                font-family: 'FontAwesome', sans-serif;
+                font-size: 18px;
+                color: @font-swatch7-color;
+                text-indent: 0;
+                .transition( all, 0.5s, ease );
+                @media @mobile {
+                    top: 0;
+                }
+            }
+            &:hover:before {
+                color: @color-swatch3;
+                .transition( all, 0.5s, ease );
+            }
+        }
+    }
+}
+
+
+
+
+
+// Signup Form and Blog Search on Desktop & Tablet
+// ------------------------------------------------
+.signupform .form-body,// Signup
+.blogsearch .form-body {// Blog
+    width: 40%;
+    @media only screen and (max-width:1024px) {
+        width: 50%;
+    }
+    @media @tablet {
+        width: 60%;
+    }
+    @media only screen and (max-width:600px) {
+        width: 100%;
+    }
+    @media @mobile {
+        display: block;
+    }
+    @media only screen and (min-width:480px) {
+        input[type="search"],
+        input[type="email"],
+        .input--single-line {
+            &:focus {
+                border-color: fade(@color-swatch3, 30%);
+                box-shadow: inset -2px 0 0 0 fade(@color-swatch3, 30%), inset 0 1px 3px @color-swatch7;
+                outline: 0;
+            }
+        }
+    }
+}
+
+// Forms in Responsive Columns
+// ----------------------------
+
+// Two Columns
+.columns-two-left,
+.columns-two-right,
+// Three Columns
+.columns-three-left,
+.columns-three-middle,
+.columns-three-right {
+    .signupform .form-body, // Signup
+    .blogsearch .form-body {// Blog
+        width: 100%;
+        @media only screen and (max-width:1024px) {
+            width: 100%;
+        }
+        @media @tablet {
+            width: 100%;
+        }
+    }
+}
+
+// Three Columns
+.columns-three-left,
+.columns-three-middle,
+.columns-three-right {
+    .signupform .form-body, // Signup
+    .blogsearch .form-body,
+    .contactform { // Blog
+        @media @tablet {
+            display: block;
+            width: 100%;
+            .input {
+                border-right: 2px solid @color-swatch7;
+            }
+            .button {
+                display: block;
+                width: auto;
+                margin-left: 0;
+                font-size: @font__button--font-size;
+                white-space: normal;
+                border-left: 2px solid @color-swatch7;
+                &:before {
+                    display: none;
+                }
+                &:hover {
+                    border: 2px solid @color-swatch3;
+                }
+            }
+        }
+    }
+}
+
+// Four Columns
+.columns-four-first,
+.columns-four-second,
+.columns-four-third,
+.columns-four-fourth {
+    .signupform .form-body, // Signup
+    .blogsearch .form-body,
+    .contactform { // Blog
+        display: block;
+        width: 100%;
+        .input {
+            border-right: 2px solid @color-swatch7;
+        }
+        .button {
+                width: auto;
+                margin-left: 0;
+                font-size: @font__button--font-size;
+                border-left: 2px solid @color-swatch7;
+            &:hover {
+                border: 2px solid @color-swatch3;
+            }
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
+
+
+// -------------------------------------
+// Ecom Search in Header
+// -------------------------------------
+
+.flex-product-search {
+    .form-group {
+        height: 44px;
+        margin-bottom: 0;
+    }
+    .input {
+        height: 44px;
+        text-align: right;
+        border: none;
+        background-color: transparent;
+        &:focus {
+            border: none;
+            box-shadow: none;
+            opacity: 0.6;
+        }
+        @media @mobile {
+            text-align: left;
+        }
+    }
+    .button--submit {
+        position: relative;
+        height: auto;
+        padding: 5px 12px;
+        font-size: 0;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        &:before {
+            position: absolute;
+            top: 2px;
+            right: 0;
+            content: "\F002";
+            font-family: 'FontAwesome', sans-serif;
+            font-size: 18px;
+            color: @font-swatch7-color;
+            .transition( all, 0.5s, ease );
+            @media @mobile {
+                top: 3px;
+            }
+        }
+        &:hover {
+            border: none;
+            &:before {
+                color: @color-swatch3;
+                .transition( all, 0.5s, ease );
+            }
+        }
+    }
+    @media @mobile {
+        border: 2px solid @color-swatch7;
+        padding: 0 10px 0 0;
+    }
+}
+

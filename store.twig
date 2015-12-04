@@ -1,0 +1,13 @@
+{# Copyright 2014 BaseKit Platform Ltd #}
+{% extends "layout.twig" %}
+{% block class %}bk-pt-store{% endblock %}
+{% block content %}
+
+<div class="bk-pt-store__productslist">
+    {{widget('ecomproductslist', 'productlist', {})|raw}}
+</div>
+
+<!-- Main Widget Zone -->
+{{zone('main')|raw}}
+
+{% endblock %}
