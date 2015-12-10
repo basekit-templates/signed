@@ -25,9 +25,11 @@
 
     <div class="header__second-row flex-container">
 
+        {% if plugins.ecommerce.store.live %}
         <div class="flex-item flex-page-title">
             {{widget('pagetitle', 'title', {})|raw}}
         </div>
+        {% endif %}
 
         {% if plugins.ecommerce.store.live %}
             <div class="flex-item flex-product-search">
