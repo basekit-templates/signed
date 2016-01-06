@@ -28,25 +28,9 @@
 
 <body class="{{ page.backgroundClass }} {% block class %}{% endblock %}">
 
-    <!-- Container -->
 
-    <div class="container">
-
-        <!-- Header Include -->
-        {% include "includes/header.twig" %}
-
-        <div class="page-content">
-
-            <!-- Main Widget Zone -->
             {% block content %}
             {% endblock %}
-
-        </div>
-
-            <!-- Footer Include -->
-            {% include "includes/footer.twig" %}
-
-        </div>
 
     {% include basekit.bodyScript %}
 

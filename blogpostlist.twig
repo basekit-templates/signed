@@ -3,13 +3,33 @@
 {% block class %}bk-pt-blog{% endblock %}
 {% block content %}
 
-<div class="bk-pt-blog__search">
-    {{widget('blogsearch', 'blogsearch', {})|raw}}
-</div>
+    <!-- Container -->
+    <div class="container">
 
-<div class="bk-pt-blog__postslist">
-    {{widget('blogpostlist', 'allblogposts', {})|raw}}
-</div>
+        <!-- Header Include -->
+        {% include "includes/header.twig" %}
 
+        <div class="page-content">
+
+            <div class="bk-pt-blog__search">
+                {{widget('blogsearch', 'blogsearch', {})|raw}}
+            </div>
+
+            <div class="bk-pt-blog__postslist">
+                {{widget('blogpostlist', 'allblogposts', {})|raw}}
+            </div>
+
+            <!-- Main Widget Zone -->
+            {{zone('main')|raw}}
+
+        </div>
+
+            <!-- Footer Include -->
+            {% include "includes/footer.twig" %}
+
+    </div>
 
 {% endblock %}
+
+
+

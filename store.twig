@@ -3,11 +3,29 @@
 {% block class %}bk-pt-store{% endblock %}
 {% block content %}
 
-<div class="bk-pt-store__productslist">
-    {{widget('ecomproductslist', 'productlist', {})|raw}}
-</div>
+    <!-- Container -->
 
-<!-- Main Widget Zone -->
-{{zone('main')|raw}}
+    <div class="container">
+
+        <!-- Header Include -->
+        {% include "includes/header.twig" %}
+
+        <div class="page-content">
+
+            <div class="bk-pt-store__productslist">
+                {{widget('ecomproductslist', 'productlist', {})|raw}}
+            </div>
+
+            <!-- Main Widget Zone -->
+            {{zone('main')|raw}}
+
+        </div>
+
+            <!-- Footer Include -->
+            {% include "includes/footer.twig" %}
+
+    </div>
 
 {% endblock %}
+
+

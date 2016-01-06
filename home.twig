@@ -2,46 +2,107 @@
 {% block class %}bk-pt-home{% endblock %}
 {% block content %}
 
-<!-- Theme Feature Widget -->
-<div class="homepage__slideshow">
-    {{widget('responsiveslideshow', 'slideshow', {
-        'duration':'3',
-        'transSpeed': '1000',
-        'transType': 'fade',
-        'showButtons': true,
-        'showBullets': true,
-        'allowPause': true,
-        'allowLoop': true,
-        'crop': 1,
-        'images':[
-          {
-            'imageHeight':'640',
-            'imageWidth':'1200',
-            'url':asset('/images/slideshow-1.jpg'),
-            'title':'Lorem ipsum dolor sit amet, consectetur adipiscin.',
-            'description': 'Praesent mauris enim, egestas vel ultrices sed, sollicitudin eu nibh. Suspendisse cursus consequata.'
-          },
-          {
-            'imageHeight':'640',
-            'imageWidth':'1200',
-            'url':asset('/images/slideshow-2.jpg'),
-            'title':'Second slide title',
-            'description': 'Second slide description'
-          },
-          {
-            'imageHeight':'640',
-            'imageWidth':'1200',
-            'url':asset('/images/slideshow-3.jpg'),
-            'title':'Third slide title',
-            'description': 'Third slide description'
-          }
-        ]
-    })|raw}}
-</div>
+<div class="container">
+
+    <!-- Header Include -->
+    <header>
+        <div class="header__first-row flex-container">
+
+            <div class="tablet-top-bar"></div>
+            <div class="flex-item flex-shopbasket">
+                {{widget('ecombasket', 'shopbasket', {})|raw}}
+            </div>
+            <div class="flex-item flex-nav">
+                {{widget('extendednavigation', 'navigation', {"align":"right"})|raw}}
+            </div>
+            <div class="flex-item flex-logo">
+                {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            </div>
+            <div class="flex-item flex-companyname">
+                {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+            </div>
+
+        </div>
+        <div class="default-header-bottom-line"></div>
+
+        <!-- End Template Widgets -->
+
+        {% if plugins.ecommerce.store.live %}
+        <div class="header__second-row flex-container">
+
+            <div class="flex-item flex-page-title">
+                {{widget('pagetitle', 'title', {})|raw}}
+            </div>
+
+            <div class="flex-item flex-product-search">
+                <form class="form  ecomproductslist__form js-productlist-display-form" method="GET" action="/store">
+                    <div class="form-body">
+                        <div class="form-group">
+                            <input class="input js-display-control" id="page-zones__main-widgets__ecomproductslistWidget__ecomproductslist__search" name="productlist-search" placeholder="Search Products..." type="search" value="">
+                        </div>
+                        <div class="form-group">
+                            <button class="button  button--submit  ecomproductslist__button" type="submit">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        {% endif %}
+
+    </header>
+
+        <div class="page-content">
+
+            <!-- Theme Feature Widget -->
+            <div class="homepage__slideshow">
+                {{widget('responsiveslideshow', 'slideshow', {
+                    'duration':'3',
+                    'transSpeed': '1000',
+                    'transType': 'fade',
+                    'showButtons': true,
+                    'showBullets': true,
+                    'allowPause': true,
+                    'allowLoop': true,
+                    'crop': 1,
+                    'images':[
+                      {
+                        'imageHeight':'640',
+                        'imageWidth':'1200',
+                        'url':asset('/images/slideshow-1.jpg'),
+                        'title':'Lorem ipsum dolor sit amet, consectetur adipiscin.',
+                        'description': 'Praesent mauris enim, egestas vel ultrices sed, sollicitudin eu nibh. Suspendisse cursus consequata.'
+                      },
+                      {
+                        'imageHeight':'640',
+                        'imageWidth':'1200',
+                        'url':asset('/images/slideshow-2.jpg'),
+                        'title':'Second slide title',
+                        'description': 'Second slide description'
+                      },
+                      {
+                        'imageHeight':'640',
+                        'imageWidth':'1200',
+                        'url':asset('/images/slideshow-3.jpg'),
+                        'title':'Third slide title',
+                        'description': 'Third slide description'
+                      }
+                    ]
+                })|raw}}
+            </div>
 
         <!-- Main Widget Zone -->
 
         {{zone('main')|raw}}
+
+        </div>
+
+            <!-- Footer Include -->
+            {% include "includes/footer.twig" %}
+
+    </div>
+
+
 
 {% endblock %}
 

@@ -168,7 +168,7 @@ header {
         left: 0;
         width: 100%;
         height: 46px;
-        background-color: @font-swatch6-color;
+        background-color: @color__navigation--background;
     }
 }
 
@@ -240,14 +240,6 @@ header {
     color: @font-swatch6-color-hover;
 }
 
-// Navigation on Tablet
-
-.extendednavigation .navigation-list {
-    @media @tablet {
-        margin-top: 3px;
-    }
-}
-
 // Hide toggle on desktop
 .navigation-toggle {
     display: none;
@@ -261,7 +253,7 @@ header {
         text-indent: 1000px;
         overflow: hidden;
         line-height: 0;
-        background-color: @font-swatch6-color;
+        background-color: transparent;
         border: none;
         &:before {
             content: '';
@@ -273,8 +265,8 @@ header {
             right: 0;
             margin-top: 15px;
             margin-left: -13px;
-            background: @color-swatch1;
-            box-shadow: 0 7px 0 @color-swatch1;
+            background: @color-swatch4;
+            box-shadow: 0 7px 0 @color-swatch4;
             .transition( all, 0.5s, ease );
         }
         &:after {
@@ -287,19 +279,19 @@ header {
             right: 0;
             margin-top: 15px;
             margin-left: -13px;
-            background: @color-swatch1;
+            background: @color-swatch4;
             .transition( all, 0.5s, ease );
         }
     }
     &:hover {
-        background-color: @color-swatch4;
+        background-color: transparent;
         border: none;
         &:before {
-            background: lighten(@color-swatch4, 60%);
-            box-shadow: 0 7px 0 lighten(@color-swatch4, 60%);
+            background: lighten(@color-swatch4, 20%);
+            box-shadow: 0 7px 0 lighten(@color-swatch4, 20%);
         }
         &:after {
-            background: lighten(@color-swatch4, 60%);
+            background: lighten(@color-swatch4, 20%);
         }
     }
 }
@@ -312,7 +304,7 @@ header {
             width: 26px;
             margin-top: 21px;
             margin-left: -4px;
-            background: @color-swatch1;
+            background: @color-swatch4;
             box-shadow: none;
             -webkit-transform: rotate(45deg);
             -moz-transform: rotate(45deg);
@@ -331,7 +323,7 @@ header {
             right: 0;
             margin-top: 21px;
             margin-left: -4px;
-            background: @color-swatch1;
+            background: @color-swatch4;
             box-shadow: none;
             -webkit-transform: rotate(-45deg);
             -moz-transform: rotate(-45deg);
@@ -343,7 +335,7 @@ header {
         &:hover {
             &:after,
             &:before {
-                background: lighten(@color-swatch4, 60%);
+                background: lighten(@color-swatch4, 20%);
             }
         }
     }
@@ -367,7 +359,7 @@ header {
 .extendednavigation,
 .navigation-list--children {
     @media @tablet {
-        background-color: @color-swatch1;
+        background-color: transparent;
     }
 }
 .navigation-list--children {
@@ -442,13 +434,12 @@ div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
         @media @tablet {
             min-height: 44px;
             padding: 0;
-            color: @color-swatch1;
             background-color: transparent;
             border: none;
         }
         &:hover {
             @media @tablet {
-                color: lighten(@color-swatch4, 60%);
+                color: lighten(@color-swatch4, 20%);
             }
         }
     }

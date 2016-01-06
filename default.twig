@@ -3,7 +3,25 @@
 {% block class %}bk-pt-default{% endblock %}
 {% block content %}
 
- <!-- Main Widget Zone -->
-        {{zone('main')|raw}}
+    <!-- Container -->
+
+    <div class="container">
+
+        <!-- Header Include -->
+        {% include "includes/header.twig" %}
+
+        <div class="page-content">
+
+            <!-- Main Widget Zone -->
+            {{zone('main')|raw}}
+
+        </div>
+
+            <!-- Footer Include -->
+            {% include "includes/footer.twig" %}
+
+    </div>
 
 {% endblock %}
+
+

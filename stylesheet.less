@@ -8,6 +8,7 @@
 // Template Imports
 // ----------------
 @import "@{templateCommon}/bk-less-framework-v8.less";     // BK LESS Framework
+// @import "@{templateLocal}/bk-v8-test.less";
 
 @import "@{templateLocal}/less/variables-mixins.less";         // Variables & Mixins
 
@@ -142,7 +143,9 @@ input, textarea, button, .button {
         font-size: bkscale(@font__h1--font-size,0.9);
         line-height: bkscale(@font__h1--line-height,0.9);
     }
-    h2, .company-link  {
+    h2,
+    .company-link,
+    .flex-page-title .pagetitle-text {
         font-size: bkscale(@font__h2--font-size,0.9);
         line-height: bkscale(@font__h2--line-height,0.9);
     }
@@ -162,7 +165,9 @@ input, textarea, button, .button {
         font-size: bkscale(@font__h1--font-size,0.8);
         line-height: bkscale(@font__h1--line-height,0.8);
     }
-    h2, .company-link  {
+    h2,
+    .company-link,
+    .flex-page-title .pagetitle-text {
         font-size: bkscale(@font__h2--font-size,0.8);
         line-height: bkscale(@font__h2--line-height,0.8);
     }
