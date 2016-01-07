@@ -86,12 +86,12 @@ input, textarea, button, .button {
 
 .bk-pt-home .page-content {
     border-top: none;
-    padding: 0 0 40px;
+    padding: 0;
 }
 
 .page-content {
     border-top: 2px solid @color-swatch7;
-    padding: 40px 0;
+    padding: 40px 0 0;
     @media @mobile {
         border-top: 0;
     }
@@ -458,11 +458,13 @@ hr {
 // Footer
 // -----------------------------
 
-
 .template-footer {
     display: inline-block;
     width: 100%;
     padding: 30px 0;
+    @media @mobile {
+        padding: 20px 0;
+    }
     a {
         color: @font-swatch6-color;
         &:hover {
@@ -474,6 +476,9 @@ hr {
     a {
         font-size: bkscale(@font__p--font-size,0.9);
         line-height: bkscale(@font__p--line-height,0.9);
+    }
+    .copyright {
+        color: @font-swatch6-color;
     }
 }
 

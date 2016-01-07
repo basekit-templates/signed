@@ -79,15 +79,7 @@
 // --------------------
 
 .responsiveslideshow .caption {
-    width: 90%;
-    padding: 0;
-    bottom: 30px;
-    left: 5%;
-    @media @tablet {
-        bottom: 0;
-        left: 0;
-        width: 100%;
-    }
+    width: 100%;
     .image-title {
         padding: 10px 25px 5px;
     }
@@ -271,6 +263,15 @@
         color: @font-swatch6-color-hover;
         background-color: transparent;
         border: none;
+    }
+    .pause-toggle {
+        .icon--pause:before {
+            content: "\f04b";
+        }
+        .icon--play:before,
+        .icon--pause.pause:before {
+            content: "\f04c";
+        }
     }
     .previous-button,
     .next-button,
