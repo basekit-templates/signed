@@ -107,9 +107,9 @@
         },
         "font8": {
             "font-family": "\"Arvo\", Georgia, serif",
-            "font-size": "28px",
+            "font-size": "24px",
             "font-weight": "400",
-            "line-height": "38px",
+            "line-height": "34px",
             "color": "@color-swatch1",
             "letter-spacing": "inherit"
         },
