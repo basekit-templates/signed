@@ -148,6 +148,9 @@ header {
 
         .widget {
             margin-bottom: 15px;
+            @media @mobile {
+                margin-bottom: 0;
+            }
         }
     }
 }
@@ -403,7 +406,7 @@ header {
 
 // Fix overlay in editor on tablet and mobile
 
-div#page-zones__template-widgets__extendednavigation-navigation .bk-overlay {
+div#page-zones__template-widgets__extendednavigation-navigation .widget-overlay {
     @media @tablet {
         width: 30%;
         height: 44px;
