@@ -134,20 +134,25 @@ header {
 
 @media @tablet {
     .flex-logo {
-        margin-top: 30px;
+        margin: 15px 0 0;
         width: 100%;
         text-align: center;
+        .widget {
+            margin: 0 0 5px;
+        }
         .logo-image {
             padding: 0 5%;
             margin: 0 auto;
         }
     }
     .flex-companyname {
-        width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
-        margin-bottom: 30px;
+        width: 100%;
+        margin-top: 5px;
         text-align: center;
+        
+        .widget {
+            margin-bottom: 15px;
+        }
     }
 }
 
@@ -163,16 +168,21 @@ header {
 // -------------------------
 
 .tablet-top-bar {
+    display: none;
+}
+
+.flex-shopbasket .widget + .tablet-top-bar {
     @media @tablet {
+        display: block;
         position: absolute;
+        top: 0;
         left: 0;
         width: 100%;
         height: 46px;
         background-color: @color__navigation--background;
+        z-index: -1;
     }
 }
-
-
 
 
 // Shopping Basket
