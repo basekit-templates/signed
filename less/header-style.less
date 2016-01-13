@@ -213,6 +213,12 @@ header {
   }
 }
 
+.logo-image {
+    @media @tablet {
+        padding: 0 44px;
+    }
+}
+
 .company-link:hover {
     color: @font-swatch6-color;
     text-decoration: none;
@@ -462,8 +468,8 @@ div#page-zones__template-widgets__extendednavigation-navigation .widget-overlay 
     @media @tablet {
         width: 30%;
         height: 44px;
-        top: -44px !important;
         left: inherit !important;
+        z-index: 99999999;
     }
 }
 
