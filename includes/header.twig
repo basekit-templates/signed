@@ -3,11 +3,12 @@
 <header>
 
     <div class="header__first-row flex-container">
-
-        <div class="tablet-top-bar"></div>
+        {% if plugins.ecommerce.store.live %}
         <div class="flex-item flex-shopbasket">
             {{widget('ecombasket', 'shopbasket', {})|raw}}
+            <div class="tablet-top-bar"></div>
         </div>
+        {% endif %}
         <div class="flex-item flex-nav">
             {{widget('extendednavigation', 'navigation', {"align":"right"})|raw}}
         </div>
