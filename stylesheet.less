@@ -244,10 +244,13 @@ input, textarea, button, .button {
         font-weight: @font__p--font-weight;
         line-height: @font__p--line-height;
     }
+    .tweet-content {
+        color: @color__twitter-tweet--text;
+    }
     .tweet-metadata {
         font-size: 90%;
         .timestamp, .via {
-            color: lighten(@color-swatch5, 15%)
+            color: lighten(@color__twitter-tweet--text, 15%)
         }
     }
     .timestamp {

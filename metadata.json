@@ -224,7 +224,8 @@
         },
         "twitter": {
             "color__twitter-item--background": "transparent",
-            "color__twitter-account-name--text": "@color__secondary"
+            "color__twitter-account-name--text": "@color__secondary",
+            "color__twitter-tweet--text": "@font-swatch5-color"
         },
         "socialicons": {
             "color__socialicons--icon": "@font-swatch6-color",
