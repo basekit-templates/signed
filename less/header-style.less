@@ -214,7 +214,8 @@ header {
   }
 }
 
-.companyname {
+.company-link {
+    color: @color__companyname--text;
     font-family: @font__companyname--font-family;
     font-size: @font__companyname--font-size;
     font-weight: @font__companyname--font-weight;
@@ -237,7 +238,7 @@ header {
 }
 
 .company-link:hover {
-    color: @font-swatch6-color;
+    color: @color__navigation--text;
     text-decoration: none;
     .transition( all, 0.5s, ease );
 }
@@ -255,16 +256,16 @@ header {
     content: "";
     margin-left: 4px;
     border: 5px solid transparent;
-    border-top-color: @font-swatch6-color;
+    border-top-color: @color__navigation--text;
 }
 .item-name--parent:hover:after {
-    border-top-color: @font-swatch6-color-hover;
+    border-top-color: @color__navigation--text--hover;
 }
 
 // Selected nav item
 
 .navigation-item.selected > .item-name {
-    color: @font-swatch6-color-hover;
+    color: @color__navigation--text--hover;
 }
 
 // Hide toggle on desktop
@@ -518,7 +519,7 @@ header {
     .basket-toggle.button {
         min-height: inherit;
         padding: 5px 17px 5px 15px;
-        font-family: @font-swatch6-font-family;
+        font-family: @font__navigation--font-family;
         font-size: @font__navigation--font-family;
         line-height: @font__navigation--line-height;
         white-space: nowrap;
@@ -577,7 +578,7 @@ header {
         padding: 0;
         text-align: center;
         color: @color-swatch1;
-        background-color: @font-swatch6-color;
+        background-color: @color__navigation--text;
         border: none;
         @media @tablet {
             width: 40px;
@@ -603,7 +604,7 @@ header {
     .view-basket {
         padding: 8px 20px;
         color: @color-swatch1;
-        background-color: @font-swatch6-color;
+        background-color: @color__navigation--text;
         border: none;
         &:hover {
             color: @color-swatch1;
@@ -670,7 +671,7 @@ header {
     }
     .pagetitle-text {
         padding: 5px 0 0;
-        color: @font-swatch6-color;
+        color: @color__navigation--text;
         font-size: 24px;
         line-height: 34px;
     }

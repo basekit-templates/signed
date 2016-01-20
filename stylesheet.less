@@ -309,7 +309,7 @@ blockquote {
 
 // Social icons colour
 .social-link:before {
-    color: @font-swatch6-color;
+    color: @color__navigation--text;
     font-size: 16px;
     .transition( all, 0.5s, ease );
     @media @tablet {
@@ -320,7 +320,7 @@ blockquote {
 .social-link:hover {
     text-decoration: none;
     &:before {
-        color: @font-swatch6-color-hover;
+        color: @color__navigation--text--hover;
         .transition( all, 0.5s, ease );
     }
     .social-name {
@@ -328,7 +328,7 @@ blockquote {
         visibility: visible;
         opacity: 1;
         font-size: 16px;
-        color: @font-swatch6-color-hover;
+        color: @color__navigation--text--hover;
         .transition( all, 0.5s, ease );
     }
 }
@@ -395,8 +395,8 @@ hr {
 
 .clicktocall {
     .label {
-        font-family: @font-swatch7-font-family;
-        color: @font-swatch7-color;
+        font-family: @font__button--font-family;
+        color: @color__button--text;
         font-size: @font__button--font-size;
         font-weight: @font__button--font-weight;
         line-height: @font__button--line-height;
@@ -474,9 +474,9 @@ hr {
         padding: 20px 0;
     }
     a {
-        color: @font-swatch6-color;
+        color: @color__navigation--text;
         &:hover {
-            color: @font-swatch6-color-hover;
+            color: @color__navigation--text--hover;
             text-decoration: none;
         }
     }
@@ -486,7 +486,7 @@ hr {
         line-height: bkscale(@font__p--line-height,0.9);
     }
     .copyright {
-        color: @font-swatch6-color;
+        color: @color__navigation--text;
     }
 }
 
