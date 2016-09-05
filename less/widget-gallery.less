@@ -12,7 +12,11 @@
 .gallery {
     // Gallery List
     .gallery-list {
-        .clearfix;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
         margin: 0 auto;
     }
     // Gallery Item
@@ -24,6 +28,9 @@
         position: relative;
         width: 33.3%;
         vertical-align: top;
+        @media @tablet {
+            width: 50%;
+        }
         // Display at 100% at mobile
         @media @mobile {
             margin-right: 0!important;
@@ -79,7 +86,8 @@
         background-image: none !important;
         .image {
             display: block;
-            width: 100%;
+            margin: 0 auto;
+            width: auto;
         }
         @media @mobile {
             max-height: 200px;
