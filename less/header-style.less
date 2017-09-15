@@ -489,29 +489,14 @@ header {
 // Fix overlay in editor on tablet and mobile
 [data-widget-type="extendednavigation"] .widget-overlay {
     @media @tablet {
-        width: 44px;
-        height: 44px;
-        left: inherit !important;
-        z-index: 99999999;
-    }
-}
+        display: none;
 
-// Editor Navigation Overlay Settings
-[data-widget-type="extendednavigation"] .widget-overlay .widget__list {
-   @media @mobile {
-        left: -90px !important;
-        position: absolute;
-    }
-}
-
-// Fix nav overlay when store is live
-.flex-shopbasket + .flex-nav {
-    [data-widget-type="extendednavigation"] .widget-overlay {
-        @media @tablet {
-            top: -64px;
+        .open & {
+            display: block;
         }
     }
 }
+
 
 
 

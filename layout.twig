@@ -31,10 +31,19 @@
             </script>
 
             <script nonce="{{ numberUsedOnce }}">
+
                 // Toggles class open to display/hide the whole navigation
                 $( ".navigation-toggle" ).click(function() {
                     $( ".bk-extendednavigation" ).toggleClass( "open" );
                 });
+
+
+                $(document).on("click", ".navigation-toggle", function() {
+                    $( ".bk-extendednavigation, .navigation-list" ).toggleClass( "open" );
+                });
+
+
+
                 // Togglse class open to display/hide folders
                 $( ".navigation-item.folder" ).each(function() {
                     $( this ).click(function() {
