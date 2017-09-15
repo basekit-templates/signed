@@ -490,10 +490,14 @@ header {
 [data-widget-type="extendednavigation"] .widget-overlay {
     @media @tablet {
         display: none;
+    }
+}
 
-        .open & {
-            display: block;
-        }
+
+// Fix overlay in editor on tablet and mobile
+[data-widget-type="extendednavigation"] .open + .widget-overlay {
+    @media @tablet {
+        display: block;
     }
 }
 
