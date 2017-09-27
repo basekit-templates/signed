@@ -382,11 +382,10 @@ header {
 }
 
 .extendednavigation.open {
+    margin-bottom: 15px;
+
     .navigation-body {
         padding-top: 50px;
-    }
-    .open {
-        margin-bottom: 15px;
     }
 }
 
@@ -439,10 +438,23 @@ header {
     @media @tablet {
         display: none;
         width: 100%;
-        &.open {
+
+        .open & {
             display: block;
             border-bottom: 1px solid @color-swatch7;
         }
+    }
+}
+
+.navigation-item.folder .navigation-list--children {
+    @media @tablet {
+        display: none;
+    }
+}
+
+.navigation-item.folder-open .navigation-list--children {
+    @media @tablet {
+        display: block;
     }
 }
 
@@ -461,6 +473,8 @@ header {
     @media @tablet {
         border-right: none;
         border-left: none;
+        display: none;
+        position: relative;
     }
     .navigation-item--child {
         @media only screen and (min-width:770px) {
@@ -469,6 +483,12 @@ header {
                 border-bottom: none;
             }
         }
+    }
+}
+
+.folder-open .navigation-list--children {
+    @media @tablet {
+        display: block;
     }
 }
 
