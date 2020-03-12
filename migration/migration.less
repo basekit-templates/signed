@@ -12,9 +12,88 @@
 
 
     .container {
-        max-width: 100%;
+        margin: 0;
+        width: 100%;
     }
 
+
+    .page-content {
+        padding: 0;
+    }
+    
+    
+    &.bk-pt-blog .page-content {
+        .display-flex;
+        .flex-wrap(nowrap);
+        margin: 0 auto;
+        width: 90%;
+        
+        @media only screen and (min-width: 1300px) {
+           width: 1200px; 
+        }
+    }
+    
+    
+    &.bk-pt-blog.edit .page-content {
+        @media only screen and (max-width: 1500px) {
+            width: 90%;
+        }
+    }
+    
+    &.bk-pt-blog .bk-pt-blog__search {
+        margin-right: 5%;
+        margin-top: 30px;
+    }
+    
+    &.bk-pt-blog #page-zones__main > [data-name="row"]:first-child .row__container {
+        padding: 30px 0;
+    }
+    
+    
+    &.bk-pt-blog [data-name="row"] .row-overlay:before,
+    &.bk-pt-blog [data-name="row"] .row-overlay:after {
+        background-color: transparent!important;
+    }
+    
+    
+    [data-name="row"] .social-link,
+    [data-name="row"] .social-link:hover {
+        padding: 8px 12px;
+        
+        &:before {
+            margin: 0;
+        }
+    }
+    
+    
+    [data-name="row"] .social-name {
+        display: none;
+    }
+    
+    
+    [data-name="row"] .blogsearch .button--submit:before {
+        position: relative;
+        right: 0;
+    }
+
+
+    &.is-move-mode .navigation-toggle {
+        display: none;
+    }
+    
+    [data-name="row"] [data-name="ecomproduct"] .ecomproduct .form-body { 
+        padding: 0;
+    }
+    
+    .ecomproduct__tag-link {
+        font-size: bkscale(@font__p--font-size,0.9);
+    }
+    
+    
+    [data-name="row"] [data-name="gallery"] .gallery__image-link {
+        background-size: cover;
+    }
+    
 
 
 
@@ -30,11 +109,17 @@
     .empty-zone,
     #page-zones__main:empty,
     #page-zones__main > .widget:not([data-name="row"]),
-        .row:not(.row--width-no-padding) .row__container {
+    .row:not(.row--width-no-padding) .row__container {
         margin-left: auto;
         margin-right: auto;
         max-width: 1200px;
         width: 90%;
+    }
+    
+    
+    // Re adds spacing to the last widget in the zone
+    #page-zones__main > .widget:not([data-name="row"]):first-child {
+        margin-top: 40px;
     }
 
 
