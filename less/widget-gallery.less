@@ -9,6 +9,11 @@
 // Gallery Layout
 // --------------
 
+#page-zones__main > [data-name="widget"] .gallery .gallery-item,
+#migrated-site .row:not([data-rowtype^="gallery"]) [data-name="gallery"] .gallery-item {
+    padding: 0 10px;
+}
+
 .gallery {
     // Gallery List
     .gallery-list {
@@ -24,7 +29,6 @@
         display: inline-block;
         float: left;
         margin: 0 0 20px;
-        padding: 0 10px;
         position: relative;
         width: 33.3%;
         vertical-align: top;
@@ -77,22 +81,24 @@
     }
 
     // Use Background Image
-    .image-link {
+    .gallery-list .image-link {
         // images on tablet and desktop
         display: block;
         background-repeat: inherit;
         background-position: inherit;
         background-size: inherit;
-        background-image: none !important;
-        .image {
-            display: block;
-            margin: 0 auto;
-            width: auto;
-        }
+        background-image: none;
+        
         @media @mobile {
             max-height: 200px;
             overflow: hidden;
         }
+    }
+    
+    .image {
+        display: block;
+        margin: 0 auto;
+        width: auto;
     }
 }
 

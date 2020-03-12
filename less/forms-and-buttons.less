@@ -145,6 +145,7 @@ select::-ms-expand{
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         pointer-events: none;
+        z-index: 1;
         @media @tablet {
             height: 44px;
             line-height: 44px;
@@ -266,7 +267,8 @@ select::-ms-expand{
 
 .signupform, // Signup
 .blogsearch, // Blog Search
-.contactform  { // Contact Form
+.contactform,
+.advancedcontactform { // Contact Form
     .button {
         @media @mobile {
             margin-left: 0;
@@ -385,7 +387,8 @@ select::-ms-expand{
 .columns-three-right {
     .signupform .form-body, // Signup
     .blogsearch .form-body,
-    .contactform { // Blog
+    .contactform,
+    .advancedcontactform { // Blog
         @media @tablet {
             display: block;
             width: 100%;
@@ -417,7 +420,8 @@ select::-ms-expand{
 .columns-four-fourth {
     .signupform .form-body, // Signup
     .blogsearch .form-body,
-    .contactform { // Blog
+    .contactform,
+    .advancedcontactform { // Blog
         display: block;
         width: 100%;
         .input {
@@ -549,5 +553,8 @@ input[type="radio"] {
 .advancedcontactform .select-wrap {
     display: inline-block;
     width: 100%;
-  }
-
+    
+    &:after {
+        top: 15px;
+    }
+ }
