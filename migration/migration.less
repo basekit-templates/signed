@@ -11,6 +11,13 @@
     // -----------------------------
 
 
+    .header__second-row {
+        @media @mobile {
+            margin-bottom: 18px;
+        }
+    }
+
+    
     .container {
         margin: 0;
         width: 100%;
@@ -77,7 +84,8 @@
     }
 
 
-    &.is-move-mode .navigation-toggle {
+    &.is-move-mode .navigation-toggle,
+    &.row-editing .navigation-toggle {
         display: none;
     }
     
