@@ -11,7 +11,9 @@
 // Slideshow set minimum height
 .responsiveslideshow .slides-list,
 .responsiveslideshow .figure,
-.slide-navigation {
+.responsiveslideshow .previous-button,
+.responsiveslideshow .pause-toggle,
+.responsiveslideshow .next-button {
     position: relative;
     min-height: 550px;
     @media only screen and (max-width:1280px) {
@@ -195,7 +197,9 @@
     // Slideshow set minimum height
     .responsiveslideshow .slides-list,
     .responsiveslideshow .figure,
-    .slide-navigation {
+    .responsiveslideshow .previous-button,
+    .responsiveslideshow .pause-toggle,
+    .responsiveslideshow .next-button {
         min-height: 369px;
         @media only screen and (max-width:1280px) {
             min-height: 369px;
@@ -296,10 +300,8 @@
 }
 
 .slide-navigation {
-    position: absolute;
-    top: 0;
-    width: 100%;
     margin: 0;
+    padding: 0;
     .button {
         color: @color-swatch1;
         padding: 0;
@@ -327,7 +329,6 @@
         position: absolute;
         top: 0;
         width: 50px;
-        height: 100%;
         background-color: transparent;
         &:hover:before,
         &:hover:after {
@@ -367,11 +368,7 @@
         -ms-transform: translate(50%);
     }
     .pause-toggle {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
+        left: ~"calc(50% - 25px)";
     }
 }
 
@@ -382,8 +379,7 @@
 }
 
 // Slide-navigation on Mobile
-
-.slide-navigation {
+.responsiveslideshow .slide-navigation {
     @media @mobile {
         display: inline-block;
         position: relative;
@@ -394,6 +390,7 @@
         .previous-button,
         .next-button,
         .pause-toggle {
+            min-height: 0;
             position: relative;
             top: inherit;
             width: 40px;
